@@ -3,7 +3,10 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     mode: `production`,
-    entry: `./src/select2.full.js`,
+    entry: {
+        'select2': `./src/select2.full.js`,
+        'i18n/ru': './src/i18n/ru.js'
+    },
     externals: {
         jquery: 'jquery'
     }
